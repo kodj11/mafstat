@@ -3,16 +3,16 @@
     "lat": 61.676831,
     "lng": 50.820184,
     "label": "GATTI",
-    "address": "Карла Маркса 183",
-    "city": "СЫКТЫВКАР",
+    "address": "ул. Карла Маркса, д. 183",
+    "city": "Сыктывкар",
     "url": "https://vk.com/mgatti"
   },
   {
-    "lat": 61.676831,
-    "lng": 50.820184,
-    "label": "GATTI",
-    "address": "Карла Маркса 183",
-    "city": "СЫКТЫВКАР",
-    "url": "https://vk.com/mgatti"
+    "lat": 59.924316,
+    "lng": 30.301989,
+    "label": "TITAN",
+    "address": "ул. Римского-Корсакова, д. 27",
+    "city": "Санкт-Петербург",
+    "url": "https://vk.com/titanspbmafia"
   }
 ]
