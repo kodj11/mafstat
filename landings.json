@@ -14,5 +14,13 @@
     "address": "ул. Римского-Корсакова, д. 27",
     "city": "Санкт-Петербург",
     "url": "https://vk.com/titanspbmafia"
+  },
+  {
+    "lat": 55.731602,
+    "lng": 37.623896,
+    "label": "Red Elvis",
+    "address": "ул. Большая Ордынка, д. 68",
+    "city": "Москва",
+    "url": "https://vk.com/remafia"
   }
 ]
