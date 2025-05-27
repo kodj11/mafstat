@@ -33,6 +33,16 @@ CREATE TABLE `additional_points` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `additional_points`
+--
+
+LOCK TABLES `additional_points` WRITE;
+/*!40000 ALTER TABLE `additional_points` DISABLE KEYS */;
+INSERT INTO `additional_points` VALUES (6,45,0.4),(7,50,0.3),(8,55,0.2),(9,60,0.3),(10,61,0.3),(11,66,0.3),(12,71,0.1),(13,73,-0.4),(14,78,0.1),(15,79,0.4),(27,104,0.3),(28,105,-0.5),(29,106,0.25),(30,109,0.2),(31,112,0.2),(32,113,0.2);
+/*!40000 ALTER TABLE `additional_points` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `best_move`
 --
 
@@ -50,6 +60,16 @@ CREATE TABLE `best_move` (
   CONSTRAINT `best_move_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `best_move`
+--
+
+LOCK TABLES `best_move` WRITE;
+/*!40000 ALTER TABLE `best_move` DISABLE KEYS */;
+INSERT INTO `best_move` VALUES (10,17,18),(11,17,21),(12,17,26);
+/*!40000 ALTER TABLE `best_move` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `game_players`
@@ -72,6 +92,16 @@ CREATE TABLE `game_players` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `game_players`
+--
+
+LOCK TABLES `game_players` WRITE;
+/*!40000 ALTER TABLE `game_players` DISABLE KEYS */;
+INSERT INTO `game_players` VALUES (38,8,13,'peaceful'),(39,8,16,'sheriff'),(40,8,17,'mafia'),(41,8,23,'mafia'),(42,8,24,'peaceful'),(43,8,26,'peaceful'),(44,8,27,'peaceful'),(45,8,29,'don'),(46,8,30,'peaceful'),(47,8,35,'peaceful'),(48,8,36,'lead'),(49,9,14,'mafia'),(50,9,13,'peaceful'),(51,9,18,'sheriff'),(52,9,19,'peaceful'),(53,9,20,'mafia'),(54,9,21,'peaceful'),(55,9,24,'peaceful'),(56,9,26,'peaceful'),(57,9,29,'peaceful'),(58,9,34,'don'),(59,9,36,'lead'),(60,10,13,'mafia'),(61,10,20,'mafia'),(62,10,21,'peaceful'),(63,10,22,'sheriff'),(64,10,24,'peaceful'),(65,10,26,'peaceful'),(66,10,29,'don'),(67,10,32,'peaceful'),(68,10,33,'peaceful'),(69,10,34,'peaceful'),(70,10,36,'lead'),(71,11,18,'mafia'),(72,11,19,'peaceful'),(73,11,21,'sheriff'),(74,11,24,'peaceful'),(75,11,25,'peaceful'),(76,11,26,'peaceful'),(77,11,31,'peaceful'),(78,11,32,'mafia'),(79,11,33,'don'),(80,11,34,'peaceful'),(81,11,36,'lead'),(104,23,13,'peaceful'),(105,23,18,'mafia'),(106,23,19,'peaceful'),(107,23,20,'peaceful'),(108,23,21,'peaceful'),(109,23,22,'sheriff'),(110,23,25,'mafia'),(111,23,26,'don'),(112,23,31,'peaceful'),(113,23,33,'peaceful'),(114,23,36,'lead');
+/*!40000 ALTER TABLE `game_players` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `games`
 --
 
@@ -87,6 +117,16 @@ CREATE TABLE `games` (
   PRIMARY KEY (`game_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `games`
+--
+
+LOCK TABLES `games` WRITE;
+/*!40000 ALTER TABLE `games` DISABLE KEYS */;
+INSERT INTO `games` VALUES (8,'2025-04-29 18:30:00','mafia',1,1),(9,'2025-04-29 18:30:00','peaceful',1,2),(10,'2025-04-29 18:30:00','mafia',1,3),(11,'2025-04-29 18:30:00','mafia',1,4),(12,'2025-04-29 18:30:00','peaceful',1,5),(13,'2025-04-29 18:30:00','peaceful',1,6),(14,'2025-04-29 18:30:00','mafia',1,7),(15,'2025-04-29 18:30:00','peaceful',2,1),(16,'2025-04-29 18:30:00','peaceful',2,2),(17,'2025-04-29 18:30:00','mafia',2,3),(18,'2025-04-29 18:30:00','mafia',2,4),(23,'2025-04-29 18:30:00','peaceful',1,1);
+/*!40000 ALTER TABLE `games` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `killed_first`
@@ -106,6 +146,16 @@ CREATE TABLE `killed_first` (
   CONSTRAINT `killed_first_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `killed_first`
+--
+
+LOCK TABLES `killed_first` WRITE;
+/*!40000 ALTER TABLE `killed_first` DISABLE KEYS */;
+INSERT INTO `killed_first` VALUES (4,8,13),(5,9,19),(6,10,22),(7,11,21),(8,12,19),(9,13,1),(10,14,1),(11,15,21),(12,16,22),(13,17,19),(14,18,21),(17,23,19);
+/*!40000 ALTER TABLE `killed_first` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `profiles`
@@ -130,6 +180,16 @@ CREATE TABLE `profiles` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `profiles`
+--
+
+LOCK TABLES `profiles` WRITE;
+/*!40000 ALTER TABLE `profiles` DISABLE KEYS */;
+INSERT INTO `profiles` VALUES (1,13,'Студент, админ, игрок','\'Россия, Сыктывкар\'',0,'https://github.com/shadcn.png','\'remoteforsli@gmail.com\'',0),(2,34,'Студент, админ, игрок','\'Россия, Сыктывкар\'',0,'https://github.com/shadcn.png','\'remoteforsli@gmail.com\'',0);
+/*!40000 ALTER TABLE `profiles` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `users`
 --
 
@@ -150,6 +210,16 @@ CREATE TABLE `users` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `users`
+--
+
+LOCK TABLES `users` WRITE;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES (1,'user1','User One','$2b$12$MTK3H5wAJeIa3y4BPoCynuBxdS0tA.MvaRYh2lQL0BO9uEZrrq4C.','jwt1',0,'2025-02-20 17:40:52'),(2,'user2','User Two','$2b$12$MTK3H5wAJeIa3y4BPoCynuBxdS0tA.MvaRYh2lQL0BO9uEZrrq4C.','jwt2',1,'2025-02-20 17:40:52'),(3,'user3','User Three','$2b$12$MTK3H5wAJeIa3y4BPoCynuBxdS0tA.MvaRYh2lQL0BO9uEZrrq4C.','jwt3',0,'2025-02-20 17:40:52'),(4,'user4','User 5','$2b$12$MTK3H5wAJeIa3y4BPoCynuBxdS0tA.MvaRYh2lQL0BO9uEZrrq4C.','jwt4',0,'2025-02-20 17:40:52'),(5,'user5','User 7','$2b$12$MTK3H5wAJeIa3y4BPoCynuBxdS0tA.MvaRYh2lQL0BO9uEZrrq4C.','jwt5',0,'2025-02-20 17:40:52'),(6,'user6','User 6','$2b$12$MTK3H5wAJeIa3y4BPoCynuBxdS0tA.MvaRYh2lQL0BO9uEZrrq4C.','jwt6',0,'2025-02-20 17:40:52'),(7,'user7','User 8','$2b$12$MTK3H5wAJeIa3y4BPoCynuBxdS0tA.MvaRYh2lQL0BO9uEZrrq4C.','jwt7',0,'2025-02-20 17:40:52'),(8,'user8','User 9','$2b$12$MTK3H5wAJeIa3y4BPoCynuBxdS0tA.MvaRYh2lQL0BO9uEZrrq4C.','jwt8',0,'2025-02-20 17:40:52'),(9,'user9','User 10','$2b$12$MTK3H5wAJeIa3y4BPoCynuBxdS0tA.MvaRYh2lQL0BO9uEZrrq4C.','jwt9',0,'2025-02-20 17:40:52'),(10,'user10','User 11','$2b$12$MTK3H5wAJeIa3y4BPoCynuBxdS0tA.MvaRYh2lQL0BO9uEZrrq4C.','jwt10',0,'2025-02-20 17:40:52'),(11,'user11','User 12','$2b$12$MTK3H5wAJeIa3y4BPoCynuBxdS0tA.MvaRYh2lQL0BO9uEZrrq4C.','jwt11',0,'2025-02-20 17:40:52'),(12,'user12','User 13','$2b$12$MTK3H5wAJeIa3y4BPoCynuBxdS0tA.MvaRYh2lQL0BO9uEZrrq4C.','jwt12',0,'2025-02-20 17:40:52'),(13,'moxa@mail.ru','мохомор','$2b$12$MTK3H5wAJeIa3y4BPoCynuBxdS0tA.MvaRYh2lQL0BO9uEZrrq4C.','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ilx1MDQzY1x1MDQzZVx1MDQ0NVx1MDQzZVx1MDQzY1x1MDQzZVx1MDQ0MCIsInBhc3N3b3JkIjoiMTEyMlx1MDQzY1x1MDQzZVx1MDQ0NVx1MDQzMCIsImV4cCI6MTc0ODM3NzU5NCwiZGV2aWNlX2lkIjoiTW96aWxsYS81LjAgKFdpbmRvd3MgTlQgMTAuMDsgV2luNjQ7IHg2NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzEzNC4wLjAuMCBZYUJyb3dzZXIvMjUuNC4wLjAgU2FmYXJpLzUzNy4zNiJ9.aKGOB_GpWow1pSO6V1u3yi4Blvr_lT9CrpJ4_qpl3wE',1,'2025-05-04 13:07:36'),(14,'moxa1@mail.ru','Lady di','$2b$12$MTK3H5wAJeIa3y4BPoCynuBxdS0tA.MvaRYh2lQL0BO9uEZrrq4C.','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1veGFAbWFpbC5ydSIsInVzZXJuYW1lIjoiXHUwNDNjXHUwNDNlXHUwNDQ1XHUwNDMwIiwicGFzc3dvcmQiOiIxMTIyXHUwNDNjXHUwNDNlXHUwNDQ1XHUwNDMwIn0.Zrkw_fpArvj1IvFqiVZ8fUIa5eS-5rLMyU8_OM2QPk0',1,'2025-05-04 13:07:36'),(15,'moxa2@mail.ru','Ежик','$2b$12$MTK3H5wAJeIa3y4BPoCynuBxdS0tA.MvaRYh2lQL0BO9uEZrrq4C.','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1veGFAbWFpbC5ydSIsInVzZXJuYW1lIjoiXHUwNDNjXHUwNDNlXHUwNDQ1XHUwNDMwIiwicGFzc3dvcmQiOiIxMTIyXHUwNDNjXHUwNDNlXHUwNDQ1XHUwNDMwIn0.Zrkw_fpArvj1IvFqiVZ8fUIa5eS-5rLMyU8_OM2QPk0',1,'2025-05-04 13:07:36'),(16,'moxa3@mail.ru','Барракуда','$2b$12$MTK3H5wAJeIa3y4BPoCynuBxdS0tA.MvaRYh2lQL0BO9uEZrrq4C.','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1veGFAbWFpbC5ydSIsInVzZXJuYW1lIjoiXHUwNDNjXHUwNDNlXHUwNDQ1XHUwNDMwIiwicGFzc3dvcmQiOiIxMTIyXHUwNDNjXHUwNDNlXHUwNDQ1XHUwNDMwIn0.Zrkw_fpArvj1IvFqiVZ8fUIa5eS-5rLMyU8_OM2QPk0',1,'2025-05-04 13:07:36'),(17,'moxa4@mail.ru','Net_ruki','$2b$12$MTK3H5wAJeIa3y4BPoCynuBxdS0tA.MvaRYh2lQL0BO9uEZrrq4C.','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1veGFAbWFpbC5ydSIsInVzZXJuYW1lIjoiXHUwNDNjXHUwNDNlXHUwNDQ1XHUwNDMwIiwicGFzc3dvcmQiOiIxMTIyXHUwNDNjXHUwNDNlXHUwNDQ1XHUwNDMwIn0.Zrkw_fpArvj1IvFqiVZ8fUIa5eS-5rLMyU8_OM2QPk0',1,'2025-05-04 13:07:36'),(18,'moxa5@mail.ru','Pel','$2b$12$MTK3H5wAJeIa3y4BPoCynuBxdS0tA.MvaRYh2lQL0BO9uEZrrq4C.','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1veGFAbWFpbC5ydSIsInVzZXJuYW1lIjoiXHUwNDNjXHUwNDNlXHUwNDQ1XHUwNDMwIiwicGFzc3dvcmQiOiIxMTIyXHUwNDNjXHUwNDNlXHUwNDQ1XHUwNDMwIn0.Zrkw_fpArvj1IvFqiVZ8fUIa5eS-5rLMyU8_OM2QPk0',1,'2025-05-04 13:07:36'),(19,'moxa6@mail.ru','Вард','$2b$12$MTK3H5wAJeIa3y4BPoCynuBxdS0tA.MvaRYh2lQL0BO9uEZrrq4C.','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1veGFAbWFpbC5ydSIsInVzZXJuYW1lIjoiXHUwNDNjXHUwNDNlXHUwNDQ1XHUwNDMwIiwicGFzc3dvcmQiOiIxMTIyXHUwNDNjXHUwNDNlXHUwNDQ1XHUwNDMwIn0.Zrkw_fpArvj1IvFqiVZ8fUIa5eS-5rLMyU8_OM2QPk0',1,'2025-05-04 13:07:36'),(20,'moxa7@mail.ru','Сильвия','$2b$12$MTK3H5wAJeIa3y4BPoCynuBxdS0tA.MvaRYh2lQL0BO9uEZrrq4C.','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1veGFAbWFpbC5ydSIsInVzZXJuYW1lIjoiXHUwNDNjXHUwNDNlXHUwNDQ1XHUwNDMwIiwicGFzc3dvcmQiOiIxMTIyXHUwNDNjXHUwNDNlXHUwNDQ1XHUwNDMwIn0.Zrkw_fpArvj1IvFqiVZ8fUIa5eS-5rLMyU8_OM2QPk0',1,'2025-05-04 13:07:36'),(21,'moxa8@mail.ru','Drive','$2b$12$MTK3H5wAJeIa3y4BPoCynuBxdS0tA.MvaRYh2lQL0BO9uEZrrq4C.','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1veGFAbWFpbC5ydSIsInVzZXJuYW1lIjoiXHUwNDNjXHUwNDNlXHUwNDQ1XHUwNDMwIiwicGFzc3dvcmQiOiIxMTIyXHUwNDNjXHUwNDNlXHUwNDQ1XHUwNDMwIn0.Zrkw_fpArvj1IvFqiVZ8fUIa5eS-5rLMyU8_OM2QPk0',1,'2025-05-04 13:07:36'),(22,'moxa9@mail.ru','Артемида','$2b$12$MTK3H5wAJeIa3y4BPoCynuBxdS0tA.MvaRYh2lQL0BO9uEZrrq4C.','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1veGFAbWFpbC5ydSIsInVzZXJuYW1lIjoiXHUwNDNjXHUwNDNlXHUwNDQ1XHUwNDMwIiwicGFzc3dvcmQiOiIxMTIyXHUwNDNjXHUwNDNlXHUwNDQ1XHUwNDMwIn0.Zrkw_fpArvj1IvFqiVZ8fUIa5eS-5rLMyU8_OM2QPk0',1,'2025-05-04 13:07:36'),(23,'moxa10@mail.ru','Тихий дон','$2b$12$MTK3H5wAJeIa3y4BPoCynuBxdS0tA.MvaRYh2lQL0BO9uEZrrq4C.','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1veGFAbWFpbC5ydSIsInVzZXJuYW1lIjoiXHUwNDNjXHUwNDNlXHUwNDQ1XHUwNDMwIiwicGFzc3dvcmQiOiIxMTIyXHUwNDNjXHUwNDNlXHUwNDQ1XHUwNDMwIn0.Zrkw_fpArvj1IvFqiVZ8fUIa5eS-5rLMyU8_OM2QPk0',1,'2025-05-04 13:07:36'),(24,'moxa11@mail.ru','Snek','$2b$12$MTK3H5wAJeIa3y4BPoCynuBxdS0tA.MvaRYh2lQL0BO9uEZrrq4C.','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1veGFAbWFpbC5ydSIsInVzZXJuYW1lIjoiXHUwNDNjXHUwNDNlXHUwNDQ1XHUwNDMwIiwicGFzc3dvcmQiOiIxMTIyXHUwNDNjXHUwNDNlXHUwNDQ1XHUwNDMwIn0.Zrkw_fpArvj1IvFqiVZ8fUIa5eS-5rLMyU8_OM2QPk0',1,'2025-05-04 13:07:36'),(25,'moxa12@mail.ru','Вечеринка','$2b$12$MTK3H5wAJeIa3y4BPoCynuBxdS0tA.MvaRYh2lQL0BO9uEZrrq4C.','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1veGFAbWFpbC5ydSIsInVzZXJuYW1lIjoiXHUwNDNjXHUwNDNlXHUwNDQ1XHUwNDMwIiwicGFzc3dvcmQiOiIxMTIyXHUwNDNjXHUwNDNlXHUwNDQ1XHUwNDMwIn0.Zrkw_fpArvj1IvFqiVZ8fUIa5eS-5rLMyU8_OM2QPk0',1,'2025-05-04 13:07:36'),(26,'moxa13@mail.ru','Red','$2b$12$MTK3H5wAJeIa3y4BPoCynuBxdS0tA.MvaRYh2lQL0BO9uEZrrq4C.','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1veGFAbWFpbC5ydSIsInVzZXJuYW1lIjoiXHUwNDNjXHUwNDNlXHUwNDQ1XHUwNDMwIiwicGFzc3dvcmQiOiIxMTIyXHUwNDNjXHUwNDNlXHUwNDQ1XHUwNDMwIn0.Zrkw_fpArvj1IvFqiVZ8fUIa5eS-5rLMyU8_OM2QPk0',1,'2025-05-04 13:07:36'),(27,'moxa14@mail.ru','Док Браун','$2b$12$MTK3H5wAJeIa3y4BPoCynuBxdS0tA.MvaRYh2lQL0BO9uEZrrq4C.','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1veGFAbWFpbC5ydSIsInVzZXJuYW1lIjoiXHUwNDNjXHUwNDNlXHUwNDQ1XHUwNDMwIiwicGFzc3dvcmQiOiIxMTIyXHUwNDNjXHUwNDNlXHUwNDQ1XHUwNDMwIn0.Zrkw_fpArvj1IvFqiVZ8fUIa5eS-5rLMyU8_OM2QPk0',1,'2025-05-04 13:07:36'),(28,'moxa15@mail.ru','Пли','$2b$12$MTK3H5wAJeIa3y4BPoCynuBxdS0tA.MvaRYh2lQL0BO9uEZrrq4C.','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1veGFAbWFpbC5ydSIsInVzZXJuYW1lIjoiXHUwNDNjXHUwNDNlXHUwNDQ1XHUwNDMwIiwicGFzc3dvcmQiOiIxMTIyXHUwNDNjXHUwNDNlXHUwNDQ1XHUwNDMwIn0.Zrkw_fpArvj1IvFqiVZ8fUIa5eS-5rLMyU8_OM2QPk0',1,'2025-05-04 13:07:36'),(29,'moxa16@mail.ru','Hope','$2b$12$MTK3H5wAJeIa3y4BPoCynuBxdS0tA.MvaRYh2lQL0BO9uEZrrq4C.','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1veGFAbWFpbC5ydSIsInVzZXJuYW1lIjoiXHUwNDNjXHUwNDNlXHUwNDQ1XHUwNDMwIiwicGFzc3dvcmQiOiIxMTIyXHUwNDNjXHUwNDNlXHUwNDQ1XHUwNDMwIn0.Zrkw_fpArvj1IvFqiVZ8fUIa5eS-5rLMyU8_OM2QPk0',1,'2025-05-04 13:07:36'),(30,'moxa17@mail.ru','Алекса','$2b$12$MTK3H5wAJeIa3y4BPoCynuBxdS0tA.MvaRYh2lQL0BO9uEZrrq4C.','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1veGFAbWFpbC5ydSIsInVzZXJuYW1lIjoiXHUwNDNjXHUwNDNlXHUwNDQ1XHUwNDMwIiwicGFzc3dvcmQiOiIxMTIyXHUwNDNjXHUwNDNlXHUwNDQ1XHUwNDMwIn0.Zrkw_fpArvj1IvFqiVZ8fUIa5eS-5rLMyU8_OM2QPk0',1,'2025-05-04 13:07:36'),(31,'moxa18@mail.ru','Наблюдатель','$2b$12$MTK3H5wAJeIa3y4BPoCynuBxdS0tA.MvaRYh2lQL0BO9uEZrrq4C.','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1veGFAbWFpbC5ydSIsInVzZXJuYW1lIjoiXHUwNDNjXHUwNDNlXHUwNDQ1XHUwNDMwIiwicGFzc3dvcmQiOiIxMTIyXHUwNDNjXHUwNDNlXHUwNDQ1XHUwNDMwIn0.Zrkw_fpArvj1IvFqiVZ8fUIa5eS-5rLMyU8_OM2QPk0',1,'2025-05-04 13:07:36'),(32,'moxa19@mail.ru','Фантом','$2b$12$MTK3H5wAJeIa3y4BPoCynuBxdS0tA.MvaRYh2lQL0BO9uEZrrq4C.','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1veGFAbWFpbC5ydSIsInVzZXJuYW1lIjoiXHUwNDNjXHUwNDNlXHUwNDQ1XHUwNDMwIiwicGFzc3dvcmQiOiIxMTIyXHUwNDNjXHUwNDNlXHUwNDQ1XHUwNDMwIn0.Zrkw_fpArvj1IvFqiVZ8fUIa5eS-5rLMyU8_OM2QPk0',1,'2025-05-04 13:07:36'),(33,'moxa20@mail.ru','Бука','$2b$12$MTK3H5wAJeIa3y4BPoCynuBxdS0tA.MvaRYh2lQL0BO9uEZrrq4C.','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1veGFAbWFpbC5ydSIsInVzZXJuYW1lIjoiXHUwNDNjXHUwNDNlXHUwNDQ1XHUwNDMwIiwicGFzc3dvcmQiOiIxMTIyXHUwNDNjXHUwNDNlXHUwNDQ1XHUwNDMwIn0.Zrkw_fpArvj1IvFqiVZ8fUIa5eS-5rLMyU8_OM2QPk0',1,'2025-05-04 13:07:36'),(34,'moxa21@mail.ru','Самолет','$2b$12$MTK3H5wAJeIa3y4BPoCynuBxdS0tA.MvaRYh2lQL0BO9uEZrrq4C.','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ilx1MDQyMVx1MDQzMFx1MDQzY1x1MDQzZVx1MDQzYlx1MDQzNVx1MDQ0MiIsInBhc3N3b3JkIjoiMTEyMlx1MDQzY1x1MDQzZVx1MDQ0NVx1MDQzMCIsImV4cCI6MTc0Nzk1MzU1MCwiZGV2aWNlX2lkIjoiTW96aWxsYS81LjAgKFdpbmRvd3MgTlQgMTAuMDsgV2luNjQ7IHg2NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzEzNC4wLjAuMCBZYUJyb3dzZXIvMjUuNC4wLjAgU2FmYXJpLzUzNy4zNiJ9.HAE1dKcOcWK32Gke6cvwOPptVYn3WPUv3M09tpktkEg',1,'2025-05-04 13:07:36'),(35,'moxa22@mail.ru','Сосед','$2b$12$MTK3H5wAJeIa3y4BPoCynuBxdS0tA.MvaRYh2lQL0BO9uEZrrq4C.','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1veGFAbWFpbC5ydSIsInVzZXJuYW1lIjoiXHUwNDNjXHUwNDNlXHUwNDQ1XHUwNDMwIiwicGFzc3dvcmQiOiIxMTIyXHUwNDNjXHUwNDNlXHUwNDQ1XHUwNDMwIn0.Zrkw_fpArvj1IvFqiVZ8fUIa5eS-5rLMyU8_OM2QPk0',1,'2025-05-04 13:07:36'),(36,'moxa23@mail.ru','Кристи','$2b$12$MTK3H5wAJeIa3y4BPoCynuBxdS0tA.MvaRYh2lQL0BO9uEZrrq4C.','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1veGFAbWFpbC5ydSIsInVzZXJuYW1lIjoiXHUwNDNjXHUwNDNlXHUwNDQ1XHUwNDMwIiwicGFzc3dvcmQiOiIxMTIyXHUwNDNjXHUwNDNlXHUwNDQ1XHUwNDMwIn0.Zrkw_fpArvj1IvFqiVZ8fUIa5eS-5rLMyU8_OM2QPk0',1,'2025-05-04 13:07:36');
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Dumping routines for database 'mafia'
 --
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -162,4 +232,4 @@ CREATE TABLE `users` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-05-27 14:30:25
+-- Dump completed on 2025-05-27 15:32:40
