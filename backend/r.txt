@@ -1,0 +1,9 @@
+pip3 install mysql-connector-python==8.0.28
+pip3 install fastapi --break-system-packages
+pip3 install uvicorn[standard] --break-system-packages
+pip3 install bcrypt --break-system-packages
+pip3 install pyjwt --break-system-packages
+pip install pydantic[email]
+pip install bleach
+pip install python-dotenv
+mysql -u root -p 4
