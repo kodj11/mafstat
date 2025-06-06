@@ -1,0 +1,219 @@
+
+
+@media (min-width: 768px) {
+  .our-values-scroll-04 {
+    display: none;
+  }
+  .intro.active {
+    padding-top: 70px;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .our-values-scroll-03  {
+    display: none;
+  }
+  .our-values-scroll-04  {
+    display: none;
+  }
+  .intro.active {
+    position: relative;
+    padding-top: 70px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    overflow-y: auto; 
+
+  }
+  
+}
+
+.scrolling {
+  display: contents;
+  position: relative;
+  overflow: visible;
+}
+
+.stickys {
+  position: sticky;
+  top: 0;
+  padding-top: 10px;
+  min-height: 100vh; /* Высота на весь экран */
+}
+
+.mainDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10% 0 0 0;
+}
+
+.mainDivText {
+  font-family: 'Prospect';
+  font-size: 3rem;
+}
+
+.stickys, .scrolling {
+  overflow: auto;
+
+}
+
+.stickys::-webkit-scrollbar {
+  display: none; /* Скрыть полосу прокрутки в WebKit-браузерах */
+}
+
+.intros {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.intro {
+  position: relative; /* Убираем sticky */
+  margin-bottom: 100px;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  overflow-y: auto; /* Разрешаем прокрутку */
+  height: 100vh; /* Фиксированная высота */
+  
+}
+
+.intro::-webkit-scrollbar {
+  display: none; /* Скрыть полосу прокрутки в WebKit-браузерах */
+}
+
+.html::-webkit-scrollbar {
+  display: none; /* Скрыть полосу прокрутки в WebKit-браузерах */
+}
+
+.intro.active {
+  display: block;
+  opacity: 1;
+}
+
+.our-values-scroll {
+  height: 200vh;
+}
+
+.our-values-scroll > * {
+  height: 100vh;
+}
+
+.research {
+  margin: 2rem 0;
+  border-radius: 3vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1.5rem;
+  font-family: 'Helvetica';
+  padding: 0 1rem;
+}
+
+.FooterStickys {
+  position: absolute; /* Или fixed, если нужно зафиксировать внизу */
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body::before,
+body::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  opacity: 0.8;
+  max-width: 100%; 
+  max-height: 100%;
+  overflow: hidden;
+}
+
+body::before,
+body::after {
+  content: '';
+  position: fixed; /* Используем fixed вместо absolute */
+  z-index: -1;
+  opacity: 0.8;
+  width: 100vw; /* Ограничиваем ширину до ширины окна браузера */
+  height: 100vh; /* Ограничиваем высоту до высоты окна браузера */
+  overflow: hidden;
+}
+
+body::before {
+  background: var(--third-glow);
+  border-radius: 50%;
+  width: 50vw;
+  height: 50vw;
+  margin-left: -200px;
+  filter: blur(90px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Центрируем элемент */
+  animation: animateBefore 11s cubic-bezier(0.47, 0, 0.745, 0.715) infinite;
+  max-width: 100vw; /* Обеспечиваем ограничение по ширине */
+  max-height: 100vh; /* Обеспечиваем ограничение по высоте */
+  transform: translateZ(0);
+}
+
+body::after {
+  background: var(--secondary-glow);
+  border-radius: 50%;
+  width: 500px;
+  height: 700px;
+  filter: blur(90px);
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%); /* Центрируем элемент */
+  animation: animateAfter 11s cubic-bezier(0.47, 0, 0.745, 0.715) infinite;
+  max-width: 100vw; /* Обеспечиваем ограничение по ширине */
+  max-height: 100vh; /* Обеспечиваем ограничение по высоте */
+  transform: translateZ(0);
+}
+
+@keyframes animateBefore {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(200px) scale(0.7);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes animateAfter {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-250px) scale(1.5);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .mainGrad {
+    padding: 1vh 0;
+  }
+
+  .mainDiv {
+    font-size: 2rem;
+  }
+
+  .research {
+    font-size: 1rem;
+  }
+
+  body::before,
+  body::after {
+    width: 100vw;
+    height: 100vw;
+  }
+}
