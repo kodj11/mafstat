@@ -144,22 +144,36 @@ export function AddGameForm() {
     }
   }, [searchQuery])
 
+  useEffect(() => {
+    if (!Cookies.get('csrf_token')) {
+      fetch(`${API_BASE_URL}/api/csrf-token`, { credentials: 'include' });
+    }
+  }, []);
+
   const fetchPlayers = async (query: string) => {
     try {
+      const csrfToken = Cookies.get('csrf_token');
       const response = await fetch(`${API_BASE_URL}/api/search-players`, {
         method: 'POST',
-        headers: { 'Content-Type': 'text/plain' },
-        body: query
-      })
-      const data = await response.json()
-      setFoundPlayers(data.players || [])
+        headers: {
+          'Content-Type': 'application/json',
+          'x-csrf-token': csrfToken || ''
+        },
+        body: JSON.stringify({
+          query,
+          limit: 30,
+          offset: 0
+        })
+      });
+      const data = await response.json();
+      setFoundPlayers(data.players || []);
     } catch (error) {
-      console.error('Error searching players:', error)
+      console.error('Error searching players:', error);
       toast({
         variant: "destructive",
         title: "Ошибка поиска",
         description: "Не удалось найти игроков.",
-      })
+      });
     }
   }
 

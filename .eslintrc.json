@@ -1,0 +1,18 @@
+{
+  "extends": ["next/core-web-vitals", "next/typescript"],
+  "rules": {
+    "@typescript-eslint/no-unused-expressions": "off", // Отключаем правило бесполезных
+    "@typescript-eslint/no-unused-vars": "off", // Откл неиспользуемые
+    "@typescript-eslint/no-this-alias": "off", // откл правило this
+    "@typescript-eslint/ban-ts-comment": "off", // откл правило комментов
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-unsafe-function-type": "off",
+    "react/no-unescaped-entities": "off",
+    "no-var": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "prefer-const": "off",
+    "@next/next/no-sync-scripts": "off",
+    "@next/next/inline-script-id": "off",
+    "@typescript-eslint/no-empty-object-type": "off"
+  }
+}
